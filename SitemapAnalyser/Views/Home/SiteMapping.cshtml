@@ -1,0 +1,227 @@
+﻿@model SitemapAnalyser.ViewModel.SiteMappingViewModel
+
+@{
+    ViewBag.Title = "Sitemap";
+}
+<style>
+    body {
+        margin: 40px;
+        background: #666;
+    }
+
+    .pointer {
+        cursor: pointer;
+    }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+<script>
+    window.onload = function ()
+    {
+        var objectList = @Html.Raw(Json.Encode(Model.AllObjects.ToList()));
+
+        var LineObjectList = @Html.Raw(Json.Encode(Model.AllLineObjects.ToList()));
+
+        var listRect = [];
+
+        var svg = document.getElementsByTagName('svg')[0];
+        svg.style.overflow = "auto";
+
+        var svgNS = svg.namespaceURI;
+
+        var Width = @Html.Raw(Json.Encode(Model.RectWidth));
+        var Hight = @Html.Raw(Json.Encode(Model.RectHight));
+
+        var WidthText = @Html.Raw(Json.Encode(Model.RectWidthText));
+        var HightText = @Html.Raw(Json.Encode(Model.RectHightText));
+
+        var svgHeight = @Html.Raw(Json.Encode(Model.HeightSize));
+        var svgWidth = @Html.Raw(Json.Encode(Model.WidthSize));
+
+        var mergLeft = (svgWidth/2);
+
+        var ColorText =  @Html.Raw(Json.Encode(Model.ColorText));
+        var ColorLines =  @Html.Raw(Json.Encode(Model.ColorLines));
+        var ColorRectWithText =  @Html.Raw(Json.Encode(Model.ColorRectWithText));
+        var ColorRectWithoutText =  @Html.Raw(Json.Encode(Model.ColorRectWithoutText));
+
+        LineObjectList.forEach(function(element){
+            MakeLines(svg, svgNS, element.FromX, element.FromY, element.ToX, element.ToY, ColorLines)
+        });
+
+        objectList.forEach(function(element)
+        {
+            if (element.Show == true)
+            {
+                objectsWithText(svg, svgNS, element.XPoint , element.YPoint, WidthText, HightText, element.ObjectName, element.ObjectPath, ColorText, ColorRectWithText);
+            }
+            else
+            {
+                objectsWithoutText(svg, svgNS, element.XPoint , element.YPoint, Width, Hight, ColorRectWithoutText, element.ObjectPath);
+            }
+        });
+
+        document.getElementById('div_svg').style.height = svgHeight +  'px';
+        document.getElementById('div_svg').style.width = svgWidth + 50 + 'px';
+
+        document.getElementById('div_footer').style.height = svgHeight +  'px';
+        document.getElementById('div_footer').style.width = svgWidth + 'px';
+    }
+
+    $(document).ready(function() {
+
+        var WidthText = @Html.Raw(Json.Encode(Model.RectWidthText));
+        var objectList = @Html.Raw(Json.Encode(Model.AllObjects.ToList()));
+        var RootObject = objectList.find(o => o.ObjectName === "ROOT")
+        var screenWidth = ((screen.width) / 2 );
+
+        setScrollerPosition(RootObject.XPoint - screenWidth + (WidthText * 1.95));
+    });
+
+    function setScrollerPosition (width)
+    {
+        window.scrollTo(width,0)
+    }
+
+    function GetSVG (e)
+    {
+        var ColorText = (@Html.Raw(Json.Encode(Model.ColorText))).replace("#", "%23");
+        var ColorLines =  (@Html.Raw(Json.Encode(Model.ColorLines))).replace("#", "%23");
+        var ColorRectWithText =  (@Html.Raw(Json.Encode(Model.ColorRectWithText))).replace("#", "%23");
+        var ColorRectWithoutText =  (@Html.Raw(Json.Encode(Model.ColorRectWithoutText))).replace("#", "%23");
+        var LinesConnection =  (@Html.Raw(Json.Encode(Model.LinesConnection))).replace("#", "%23");
+
+        window.location.href = '/home/SiteMapping?path=' + e.currentTarget.id + '&colorText=' + ColorText + '&colorLines=' + ColorLines  + '&colorRectWithText=' + ColorRectWithText + '&colorRectWithoutText=' + ColorRectWithoutText + '&linesConnection=' + LinesConnection;
+    }
+
+    function MakeLines(svg, svgNS, fromX, fromY, toX, toY, colorLines)
+    {
+        var line = document.createElementNS(svgNS, 'line');
+
+        line.setAttribute('x1',fromX);
+        line.setAttribute('y1',fromY);
+        line.setAttribute('x2',toX);
+        line.setAttribute('y2',toY);
+        line.setAttribute('style',"stroke:"+ colorLines +";stroke-width:2");
+
+        svg.appendChild(line);
+    }
+
+    function objectsWithoutText(svg, svgNS, x, y, width, hight, colorRectWithoutText, path)
+    {
+        var rect = document.createElementNS(svgNS, 'rect');
+        rect.setAttribute('x', x);
+        rect.setAttribute('y', y);
+        rect.setAttribute('width', width);
+        rect.setAttribute('height', hight);
+        rect.setAttribute('fill', colorRectWithoutText);
+        rect.setAttribute('id', path);
+        rect.setAttribute('class', 'pointer');
+        rect.addEventListener("mousedown",  GetSVG);
+
+        var title = document.createElementNS(svgNS, 'title');
+        title.innerHTML = path;
+        rect.appendChild(title);
+
+        svg.appendChild(rect);
+    }
+
+    function objectsWithText(svg, svgNS, x, y, width, hight, name, path, colorText, colorRectWithText)
+    {
+        var rectX = x-(width/2);
+        var rectY = y - hight;
+
+        var rect = document.createElementNS(svgNS, 'rect');
+
+        rect.setAttribute('x', rectX);
+        rect.setAttribute('y', rectY);
+        rect.setAttribute('id', path);
+        rect.setAttribute('width', width);
+        rect.setAttribute('height', hight);
+        rect.setAttribute('stroke', colorRectWithText);
+        rect.setAttribute('stroke-width', '1px');
+        rect.setAttribute('fill', 'white');
+        rect.setAttribute('class', 'pointer');
+        rect.addEventListener("mousedown",  GetSVG);
+
+        var title = document.createElementNS(svgNS, 'title');
+        title.innerHTML = path;
+        rect.appendChild(title);
+
+        svg.appendChild(rect);
+
+        var textString = []
+
+        var textX = x;
+        var textY = y - hight + 10;
+
+        textString = name.split(/[-_.]+/);
+        var countElement = 0;
+        var yy = hight/3;
+        textString.forEach(function(element){
+            if (element.length > 13) {
+                var removeString = element.length -13;
+                element = element.substring(0, element.length - removeString)
+            }
+
+            if (textString.length === 1)
+            {
+                var Text = document.createElementNS(svgNS, 'text');
+                Text.setAttribute('id', path);
+                Text.setAttribute('x', textX);
+                Text.setAttribute('y', (yy*1) + textY);
+                Text.setAttribute('alignment-baseline', 'middle');
+                Text.setAttribute('text-anchor', 'middle');
+                Text.setAttribute('fill', colorText);
+                Text.setAttribute('class', 'pointer');
+                Text.addEventListener("mousedown",  GetSVG);
+
+                Text.textContent = element;
+                svg.appendChild(Text);
+            }
+            else
+            {
+                if(countElement<3)
+                {
+                    var Text = document.createElementNS(svgNS, 'text');
+                    Text.setAttribute('id', path);
+                    Text.setAttribute('x', textX);
+                    Text.setAttribute('y', (yy*countElement) + textY);
+                    Text.setAttribute('alignment-baseline', 'middle');
+                    Text.setAttribute('text-anchor', 'middle');
+                    Text.setAttribute('fill', colorText);
+                    Text.addEventListener("mousedown",  GetSVG);
+                    Text.setAttribute('class', 'pointer');
+                    Text.textContent = element;
+                    svg.appendChild(Text);
+
+                    countElement++;
+                }
+            }
+        });
+    }
+
+    function download()
+    {
+        var contentType = "NoamRiterSVG.svg";
+
+        var content = document.getElementsByTagName('svg')[0].outerHTML;
+
+        content = content.substr(4);
+
+        content = "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"" + content;
+
+        if(!contentType) contentType = 'application/octet-stream';
+        var a = document.createElement('a');
+        var blob = new Blob([content], {'type':contentType});
+        a.href = window.URL.createObjectURL(blob);
+        a.download = "NoamRiterSVG.svg";
+        a.click();
+    }
+</script>
+<div id="div_svg" class="moveLeft">
+    <svg id="svg" width="@Model.WidthSize" height="@Model.HeightSize" style='stroke-width: 0px; background-color: white;'>
+    </svg>
+</div>
+<div>
+    <button onclick="download()">Spara som .svg</button>
+</div>
