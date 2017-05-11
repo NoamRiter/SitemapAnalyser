@@ -41,7 +41,8 @@ namespace SitemapAnalyser.Models
                     if (node.Name == "loc")
                     {
                         string fullPath = System.Uri.UnescapeDataString(node.Value);
-
+                       
+                        fullPath = fullPath.Replace("\r\n", "");
                         fullPath = fullPath.Replace("http://", "ROOT/");
                         char lastOne = fullPath[fullPath.Length - 1];
                         if (lastOne == '/')

@@ -187,17 +187,27 @@
     <Compile Include="ViewModel\SiteMappingViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\img\den1.png" />
+    <Content Include="Content\img\den2.png" />
+    <Content Include="Content\img\diago.png" />
     <Content Include="Content\img\diagonal.jpg" />
     <Content Include="Content\img\diagonal.svg" />
     <Content Include="Content\img\diagonalS.png" />
+    <Content Include="Content\img\gear.png" />
+    <Content Include="Content\img\rect.png" />
     <Content Include="Content\img\rectangular.jpg" />
     <Content Include="Content\img\rectangular.svg" />
     <Content Include="Content\img\rectangularS.png" />
-    <Content Include="App_Data\SiteMapFiles\Sitemap.xml">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="App_Data\SiteMapFiles\Sitemap.xml" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\s4.png" />
+    <Content Include="Content\img\s5.png" />
+    <Content Include="Content\img\save-as-svg.png" />
+    <Content Include="Content\img\save1.png" />
+    <Content Include="Content\img\setting1.png" />
+    <Content Include="Content\img\setting3.png" />
+    <Content Include="Content\img\Söderberg-&amp;-Partners---Logotyp-B-Enradig---Vit.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

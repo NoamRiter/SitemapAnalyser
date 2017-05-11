@@ -67,72 +67,210 @@ E:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.MicrosoftAccount.
 E:\SitemapAnalyser\SitemapAnalyser\obj\Debug\SitemapAnalyser.csprojResolveAssemblyReference.cache
 E:\SitemapAnalyser\SitemapAnalyser\obj\Debug\SitemapAnalyser.dll
 E:\SitemapAnalyser\SitemapAnalyser\obj\Debug\SitemapAnalyser.pdb
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\roslyn\csc.exe
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.CodeAnalysis.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.CSharp.Core.targets
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.VisualBasic.Core.targets
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\roslyn\System.Collections.Immutable.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\roslyn\System.Reflection.Metadata.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\roslyn\vbc.exe
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\roslyn\VBCSCompiler.exe
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\roslyn\VBCSCompiler.exe.config
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\SitemapAnalyser.dll.config
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\SitemapAnalyser.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\SitemapAnalyser.pdb
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Antlr3.Runtime.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\EntityFramework.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\EntityFramework.SqlServer.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.Core.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.Owin.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Host.SystemWeb.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Cookies.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Facebook.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Google.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.OAuth.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Twitter.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Web.Infrastructure.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Newtonsoft.Json.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Owin.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Helpers.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Mvc.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Optimization.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Razor.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.Deployment.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.Razor.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\WebGrease.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Helpers.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Mvc.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Optimization.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Razor.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.Deployment.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.Razor.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Antlr3.Runtime.pdb
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Newtonsoft.Json.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\EntityFramework.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\EntityFramework.SqlServer.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.Core.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.Owin.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Host.SystemWeb.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Facebook.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Cookies.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.OAuth.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Google.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Twitter.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-E:\To Git\SitemapAnalyser\SitemapAnalyser\obj\Debug\SitemapAnalyser.csprojResolveAssemblyReference.cache
-E:\To Git\SitemapAnalyser\SitemapAnalyser\obj\Debug\SitemapAnalyser.dll
-E:\To Git\SitemapAnalyser\SitemapAnalyser\obj\Debug\SitemapAnalyser.pdb
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\roslyn\csc.exe
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\roslyn\vbc.exe
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\roslyn\VBCSCompiler.exe
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\SitemapAnalyser.dll.config
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\SitemapAnalyser.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\SitemapAnalyser.pdb
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Antlr3.Runtime.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\EntityFramework.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\EntityFramework.SqlServer.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Newtonsoft.Json.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Owin.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Helpers.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Mvc.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Optimization.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Razor.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.Deployment.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.Razor.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\WebGrease.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Helpers.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Mvc.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Optimization.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Razor.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.Deployment.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.Razor.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Antlr3.Runtime.pdb
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Newtonsoft.Json.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\EntityFramework.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\EntityFramework.SqlServer.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\obj\Debug\SitemapAnalyser.csprojResolveAssemblyReference.cache
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\obj\Debug\SitemapAnalyser.dll
+C:\Users\noarit\Desktop\SitemapAnalyser\SitemapAnalyser\obj\Debug\SitemapAnalyser.pdb
+D:\SitemapAnalyser\SitemapAnalyser\bin\roslyn\csc.exe
+D:\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\SitemapAnalyser\SitemapAnalyser\bin\roslyn\System.Collections.Immutable.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\roslyn\System.Reflection.Metadata.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\roslyn\vbc.exe
+D:\SitemapAnalyser\SitemapAnalyser\bin\roslyn\VBCSCompiler.exe
+D:\SitemapAnalyser\SitemapAnalyser\bin\roslyn\VBCSCompiler.exe.config
+D:\SitemapAnalyser\SitemapAnalyser\bin\SitemapAnalyser.dll.config
+D:\SitemapAnalyser\SitemapAnalyser\bin\SitemapAnalyser.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\SitemapAnalyser.pdb
+D:\SitemapAnalyser\SitemapAnalyser\bin\Antlr3.Runtime.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\EntityFramework.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\EntityFramework.SqlServer.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.Core.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Cookies.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Facebook.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Google.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.OAuth.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Twitter.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Web.Infrastructure.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\Newtonsoft.Json.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\Owin.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Helpers.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Mvc.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Optimization.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Razor.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.Deployment.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.Razor.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\WebGrease.dll
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Helpers.xml
+D:\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Mvc.xml
+D:\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Optimization.xml
+D:\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Razor.xml
+D:\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.xml
+D:\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.Deployment.xml
+D:\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.Razor.xml
+D:\SitemapAnalyser\SitemapAnalyser\bin\Antlr3.Runtime.pdb
+D:\SitemapAnalyser\SitemapAnalyser\bin\Newtonsoft.Json.xml
+D:\SitemapAnalyser\SitemapAnalyser\bin\EntityFramework.xml
+D:\SitemapAnalyser\SitemapAnalyser\bin\EntityFramework.SqlServer.xml
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.Core.xml
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.xml
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.xml
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Facebook.xml
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Cookies.xml
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.OAuth.xml
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Google.xml
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Twitter.xml
+D:\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\SitemapAnalyser\SitemapAnalyser\obj\Debug\SitemapAnalyser.csprojResolveAssemblyReference.cache
+D:\SitemapAnalyser\SitemapAnalyser\obj\Debug\SitemapAnalyser.dll
+D:\SitemapAnalyser\SitemapAnalyser\obj\Debug\SitemapAnalyser.pdb
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\roslyn\csc.exe
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.CodeAnalysis.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.CSharp.Core.targets
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\roslyn\Microsoft.VisualBasic.Core.targets
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\roslyn\System.Collections.Immutable.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\roslyn\System.Reflection.Metadata.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\roslyn\vbc.exe
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\roslyn\VBCSCompiler.exe
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\roslyn\VBCSCompiler.exe.config
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\SitemapAnalyser.dll.config
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\SitemapAnalyser.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\SitemapAnalyser.pdb
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Antlr3.Runtime.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\EntityFramework.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\EntityFramework.SqlServer.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.Core.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.Owin.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Host.SystemWeb.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Cookies.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Facebook.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Google.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.OAuth.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Twitter.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Web.Infrastructure.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Newtonsoft.Json.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Owin.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Helpers.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Mvc.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Optimization.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Razor.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.Deployment.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.Razor.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\WebGrease.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Helpers.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Mvc.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Optimization.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\System.Web.Razor.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.Deployment.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\System.Web.WebPages.Razor.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Antlr3.Runtime.pdb
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Newtonsoft.Json.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\EntityFramework.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\EntityFramework.SqlServer.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.Core.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.Owin.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Host.SystemWeb.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Facebook.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Cookies.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.OAuth.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Google.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.Twitter.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\obj\Debug\SitemapAnalyser.csprojResolveAssemblyReference.cache
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\obj\Debug\SitemapAnalyser.dll
+I:\ToGit\SitemapAnalyser\SitemapAnalyser\obj\Debug\SitemapAnalyser.pdb

@@ -19,7 +19,16 @@ namespace SitemapAnalyser.ViewModel
                 sizeAndLevel = path.Split('/').Count();
             }
 
-            PositionBuilder cm = new PositionBuilder(allObj, sizeAndLevel, linesConnection);
+            if (linesConnection == null)
+            {
+                LinesConnection = "1";
+            }
+            else{
+                LinesConnection = linesConnection;
+            }
+
+
+            PositionBuilder cm = new PositionBuilder(allObj, sizeAndLevel, LinesConnection);
             AllObjects = cm.Build();
 
             HeightSize = cm.HeightSize;
@@ -33,11 +42,45 @@ namespace SitemapAnalyser.ViewModel
             ColumnsDiff = cm.columnsDiff;
             RowDiff = cm.rowDiff;
 
-            ColorText = colorText;
-            ColorLines = colorLines;
-            ColorRectWithText = colorRectWithText;
-            ColorRectWithoutText = colorRectWithoutText;
-            LinesConnection = linesConnection;
+            if (colorText == null)
+            {
+                ColorText = "#1a1aff";
+            }
+            else
+            {
+                ColorText = colorText;
+
+            }
+            if (colorLines == null)
+            {
+                ColorLines = "#ffff00";
+
+            }
+            else
+            {
+                ColorLines = colorLines;
+
+            }
+
+            if (colorRectWithText == null)
+            {
+                ColorRectWithText = "#ff0000";
+            }
+            else
+            {
+                ColorRectWithText = colorRectWithText;
+            }
+
+            if (colorRectWithoutText == null)
+            {
+                ColorRectWithoutText = "#ff00ff";
+
+            }
+            else
+            {
+                ColorRectWithoutText = colorRectWithoutText;
+            }
+           
 
             AllLineObjects = cm.SiteMapLineObjects();
         }

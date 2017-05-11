@@ -25,7 +25,5 @@ namespace SitemapAnalyser.Models
         public bool Placed { get; set; }
         public int XPoint { get; set; }
         public int YPoint { get; set; }
-
-        public string aniName { get; set; }
     }
 }

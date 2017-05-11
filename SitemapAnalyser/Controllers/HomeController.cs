@@ -20,22 +20,28 @@ namespace SitemapAnalyser.Controllers
         [HttpPost]
         public ActionResult Upload(HttpPostedFileBase file)
         {
-            try
+            if (file.FileName.EndsWith(".xml"))
             {
-                if (file.ContentLength > 0)
+                try
                 {
-                    var fileName = "Sitemap.xml";
-                    var path = Path.Combine(Server.MapPath("~/App_Data/SiteMapFiles"), fileName);
-                    file.SaveAs(path);
+                    if (file.ContentLength > 0)
+                    {
+                        var fileName = "Sitemap.xml";
+                        var path = Path.Combine(Server.MapPath("~/App_Data/SiteMapFiles"), fileName);
+                        file.SaveAs(path);
+                    }
+                    ViewBag.Message = "Upladdningen lyckades";
+                    string x = Request.QueryString["colorText"];
+                    return RedirectToAction("SiteMapping");
                 }
-                ViewBag.Message = "Upladdningen lyckades";
-                return View("index", ViewBag.Massage);
+                catch
+                {
+                    ViewBag.Message = "Upladdningen misslyckades";
+                    return View("index", ViewBag.Massage);
+                }
             }
-            catch
-            {
-                ViewBag.Message = "Upladdningen misslyckades";
-                return View("index", ViewBag.Massage);
-            }
+            ViewBag.Message = "Fel filformat!";
+            return View("index", ViewBag.Massage);
         }
 
         [HttpPost]
@@ -69,11 +75,6 @@ namespace SitemapAnalyser.Controllers
                 model.ColorRectWithoutText = colorRectWithoutText;
             }
             return View(model);
-        }
-
-        public void splitstring(string toSplit)
-        {
-            toSplit = toSplit.Replace("http://", "");
         }
     }
 }

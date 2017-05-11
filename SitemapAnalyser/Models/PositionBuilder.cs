@@ -18,8 +18,8 @@ namespace SitemapAnalyser.Models
                     columnsDiff = 15;
                     columnsChildDiff = 3;
                     rowDiff = 90;
-                    recHight = 6;
-                    recWidht = 6;
+                    recHight = 12;
+                    recWidht = 12;
 
                     recHightText = 60;
                     recWidhtText = 120;
@@ -29,8 +29,8 @@ namespace SitemapAnalyser.Models
                     columnsDiff = 60;
                     columnsChildDiff = 4;
                     rowDiff = 90;
-                    recHight = 6;
-                    recWidht = 6;
+                    recHight = 12;
+                    recWidht = 12;
 
                     recHightText = 60;
                     recWidhtText = 120;
@@ -40,8 +40,8 @@ namespace SitemapAnalyser.Models
                     columnsDiff = 60;
                     columnsChildDiff = 5;
                     rowDiff = 90;
-                    recHight = 6;
-                    recWidht = 6;
+                    recHight = 12;
+                    recWidht = 12;
 
                     recHightText = 60;
                     recWidhtText = 120;

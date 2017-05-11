@@ -23,23 +23,29 @@
             element.value = "1";
         }
     }
+
+
+    function submitUpload() {
+        document.forms['Upload'].submit();
+    }
+
+    function submitSiteMap() {
+
+        document.forms['SiteMapping'].submit();
+    }
 </script>
 <div class="jumbotron">
     <div class="row">
         <div class="row">
             @using (Html.BeginForm("Upload", "Home", FormMethod.Post,
-                                            new { enctype = "multipart/form-data" }))
+                                            new { enctype = "multipart/form-data", name = "Upload" }))
             {
                 @Html.AntiForgeryToken()
 
                 <p>Du kan skapa en .xml-fil på <a href="https://www.codepunker.com/tools/sitemap-generator" target="_blank">codepunker</a></p>
                 <p>När filen är klar kan du ladda upp den här:</p>
                 <div class="editor-field">
-                    @Html.TextBox("file", "", new { type = "file" })
-                </div>
-                <hr />
-                <div class="editor-field">
-                    <input type="submit" value="Ladda upp fil" class="submitButton" />
+                    @Html.TextBox("file", "", new { type = "file", accept = ".xml", onchange = "submitUpload()", onended = "submitSiteMap()" })
                 </div>
                 <div>
                     <h2>@ViewBag.Message</h2>
@@ -47,10 +53,11 @@
             }
         </div>
         <hr />
-        @using (@Html.BeginForm("SiteMapping", "Home", FormMethod.Post))
-            {
+        @using (@Html.BeginForm("SiteMapping", "Home", FormMethod.Post,
+                                                new { name = "SiteMapping" }))
+        {
             <div class="row">
-                <button type="button" data-toggle="collapse" data-target="#demo">Färginställningar</button>
+                <button type="button" data-toggle="collapse" data-target="#demo">Inställningar</button>
                 <div id="demo" class="collapse container">
                     <div class="col-xs-6 col-xs-offset-1 col1">
                         <h3>Färger</h3>
@@ -74,8 +81,7 @@
                             <div>
                                 <label for="linesConnection">lines koppling</label>
                                 <input type="text" id="linesConnection" onclick="linesConnections(this)" name="linesConnection" value="1" style="background-image: url(../../Content/img/rectangularS.png); width:150px; height:64px; color:transparent;" readonly="readonly">
-                               
-                              </div>
+                            </div>
                         </div>
                     </div>
                 </div>

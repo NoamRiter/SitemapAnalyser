@@ -12,7 +12,5 @@ namespace SitemapAnalyser.Models
         public int FromY { get; set; }
         public int ToX { get; set; }
         public int ToY { get; set; }
-
-        public string aniName { get; set; }
     }
 }
