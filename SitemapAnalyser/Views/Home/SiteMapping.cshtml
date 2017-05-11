@@ -1,0 +1,472 @@
+﻿@model SitemapAnalyser.ViewModel.SiteMappingViewModel
+
+@{
+    ViewBag.Title = "Sitemap";
+}
+<style>
+    body {
+        margin: 40px;
+        background: #225b93;
+    }
+
+    .pointer {
+        cursor: pointer;
+    }
+
+    .affix {
+        top: 25px;
+        left: 15px;
+        position: fixed;
+    }
+
+    .affix-top {
+        top: 25px;
+        left: 15px;
+        position: fixed;
+    }
+
+    .setting {
+        position: page;
+        background-color: transparent;
+    }
+
+    .divSetting {
+        background-color: #225b93;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .inputSetting {
+        background-color: transparent;
+        border: none;
+        height: inherit;
+    }
+
+
+    .btnsetting {
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+        outline: none;
+    }
+
+    .imgSetting {
+        border-radius: 50%;
+        -webkit-transition: -webkit-transform .8s ease-in-out;
+        transition: transform .8s ease-in-out;
+    }
+
+
+        .imgSetting:hover {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+
+    .imgSave {
+        -webkit-transition: -webkit-transform .8s ease-in-out;
+        transition: transform .8s ease-in-out;
+    }
+
+        .imgSave:hover {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+
+    .grabbable {
+        cursor: move;
+        cursor: grab;
+        cursor: -moz-grab;
+        cursor: -webkit-grab;
+    }
+
+
+        .grabbable:active {
+            cursor: grabbing;
+            cursor: -moz-grabbing;
+            cursor: -webkit-grabbing;
+        }
+
+   
+</style>
+
+<script>
+    window.onload = function ()
+    {
+        var objectList = @Html.Raw(Json.Encode(Model.AllObjects.ToList()));
+
+        var LineObjectList = @Html.Raw(Json.Encode(Model.AllLineObjects.ToList()));
+
+        var listRect = [];
+
+        var svg = document.getElementsByTagName('svg')[0];
+        svg.style.overflow = "auto";
+
+        var svgNS = svg.namespaceURI;
+
+        var Width = @Html.Raw(Json.Encode(Model.RectWidth));
+        var Hight = @Html.Raw(Json.Encode(Model.RectHight));
+
+        var WidthText = @Html.Raw(Json.Encode(Model.RectWidthText));
+        var HightText = @Html.Raw(Json.Encode(Model.RectHightText));
+
+        var svgHeight = @Html.Raw(Json.Encode(Model.HeightSize));
+        var svgWidth = @Html.Raw(Json.Encode(Model.WidthSize));
+
+        var mergLeft = (svgWidth/2);
+
+        var ColorText =  @Html.Raw(Json.Encode(Model.ColorText));
+        var ColorLines =  @Html.Raw(Json.Encode(Model.ColorLines));
+        var ColorRectWithText =  @Html.Raw(Json.Encode(Model.ColorRectWithText));
+        var ColorRectWithoutText =  @Html.Raw(Json.Encode(Model.ColorRectWithoutText));
+
+        LineObjectList.forEach(function(element){
+            MakeLines(svg, svgNS, element.FromX, element.FromY, element.ToX, element.ToY, ColorLines)
+        });
+
+        objectList.forEach(function(element)
+        {
+            if (element.Show == true)
+            {
+                objectsWithText(svg, svgNS, element.XPoint , element.YPoint, WidthText, HightText, element.ObjectName, element.ObjectPath, ColorText, ColorRectWithText);
+            }
+            else
+            {
+                objectsWithoutText(svg, svgNS, element.XPoint , element.YPoint, Width, Hight, ColorRectWithoutText, element.ObjectPath);
+            }
+        });
+
+
+
+        document.getElementById('div_svg').style.height = svgHeight +  'px';
+        document.getElementById('div_svg').style.width = svgWidth + 50 + 'px';
+
+        document.getElementById('r_body').style.height = svgHeight +  'px';
+        document.getElementById('r_body').style.width = svgWidth + 'px';
+
+
+
+        $('#colorText').change(function()
+        {
+
+            var textObjs = document.getElementsByClassName("textObj");
+            for (var index = 0; index < textObjs.length; index++)
+            {
+                textObjs[index].attributes[5].textContent = $(this).val()
+            }
+        });
+
+        $('#colorLines').change(function()
+        {
+            var lineObjs = document.getElementsByClassName("line");
+            for (var index = 0; index < lineObjs.length; index++)
+            {
+                lineObjs[index].attributes[5].nodeValue = "stroke:"+  $(this).val() +";stroke-width:2";
+            }
+        });
+
+
+        $('#colorRectWithText').change(function()
+        {
+            var rectWTextObjs = document.getElementsByClassName("rectWText");
+            for (var index = 0; index < rectWTextObjs.length; index++)
+            {
+                rectWTextObjs[index].attributes[5].nodeValue = $(this).val();
+            }
+        });
+
+        $('#colorRectWithoutText').change(function()
+        {
+            var rectWOTextObjs = document.getElementsByClassName("rectWOText");
+            for (var index = 0; index < rectWOTextObjs.length; index++)
+            {
+                rectWOTextObjs[index].attributes[4].nodeValue = $(this).val();
+            }
+        });
+
+
+       
+
+
+
+        var curYPos = 0, curXPos = 0, curDown = false;
+
+        window.addEventListener('mousemove', function(ele){
+            if(curDown === true){
+                window.scrollTo(document.body.scrollLeft + (curXPos - ele.pageX), document.body.scrollTop + (curYPos - ele.pageY));
+            }
+        });
+
+        window.addEventListener('mousedown', function(ele){ curDown = true; curYPos = ele.pageY; curXPos = ele.pageX; });
+        window.addEventListener('mouseup', function(ele){ curDown = false; });
+
+    }
+
+
+
+    $(document).ready(function() {
+
+        var WidthText = @Html.Raw(Json.Encode(Model.RectWidthText));
+        var objectList = @Html.Raw(Json.Encode(Model.AllObjects.ToList()));
+        var RootObject = objectList.find(o => o.ObjectName === "ROOT")
+        var screenWidth = ((screen.width) / 2 );
+
+        setScrollerPosition(RootObject.XPoint - screenWidth + (WidthText * 1.95));
+
+        $('#divOption').mouseup(function()
+        {
+            var svg = $("#svg");
+
+            var h = svg[0].attributes[3].nodeValue
+
+
+            //["0"].style.height    ["0"].attributes[2].childNodes.length
+
+            var diven = $("#demo").css('height', h +'px');
+        });
+    });
+
+    function setScrollerPosition (width)
+    {
+        window.scrollTo(width,0)
+    }
+
+    function GetSVG (e)
+    {
+        var ColorText = (@Html.Raw(Json.Encode(Model.ColorText))).replace("#", "%23");
+        var ColorLines =  (@Html.Raw(Json.Encode(Model.ColorLines))).replace("#", "%23");
+        var ColorRectWithText =  (@Html.Raw(Json.Encode(Model.ColorRectWithText))).replace("#", "%23");
+        var ColorRectWithoutText =  (@Html.Raw(Json.Encode(Model.ColorRectWithoutText))).replace("#", "%23");
+        var LinesConnection =  (@Html.Raw(Json.Encode(Model.LinesConnection))).replace("#", "%23");
+
+        window.location.href = '/home/SiteMapping?path=' + e.currentTarget.id + '&colorText=' + ColorText + '&colorLines=' + ColorLines  + '&colorRectWithText=' + ColorRectWithText + '&colorRectWithoutText=' + ColorRectWithoutText + '&linesConnection=' + LinesConnection;
+    }
+
+    function MakeLines(svg, svgNS, fromX, fromY, toX, toY, colorLines)
+    {
+        var line = document.createElementNS(svgNS, 'line');
+
+        line.setAttribute('x1',fromX);
+        line.setAttribute('y1',fromY);
+        line.setAttribute('x2',toX);
+        line.setAttribute('y2',toY);
+        line.setAttribute('class', 'line')
+        line.setAttribute('style',"stroke:"+ colorLines +";stroke-width:2");
+
+        svg.appendChild(line);
+    }
+
+    function objectsWithoutText(svg, svgNS, x, y, width, hight, colorRectWithoutText, path)
+    {
+        var rect = document.createElementNS(svgNS, 'rect');
+        rect.setAttribute('x', x);
+        rect.setAttribute('y', y);
+        rect.setAttribute('width', width);
+        rect.setAttribute('height', hight);
+        rect.setAttribute('fill', colorRectWithoutText);
+        rect.setAttribute('id', path);
+        rect.setAttribute('class', 'pointer rectWOText');
+        rect.addEventListener("mousedown",  GetSVG);
+
+        var title = document.createElementNS(svgNS, 'title');
+        title.innerHTML = path;
+        rect.appendChild(title);
+
+        svg.appendChild(rect);
+    }
+
+    function objectsWithText(svg, svgNS, x, y, width, hight, name, path, colorText, colorRectWithText)
+    {
+        var rectX = x-(width/2);
+        var rectY = y - hight;
+
+        var rect = document.createElementNS(svgNS, 'rect');
+
+        rect.setAttribute('x', rectX);
+        rect.setAttribute('y', rectY);
+        rect.setAttribute('id', path);
+        rect.setAttribute('width', width);
+        rect.setAttribute('height', hight);
+        rect.setAttribute('stroke', colorRectWithText);
+        rect.setAttribute('stroke-width', '1px');
+        rect.setAttribute('fill', 'white');
+        rect.setAttribute('class', 'pointer rectWText');
+        rect.addEventListener("mousedown",  GetSVG);
+
+        var title = document.createElementNS(svgNS, 'title');
+        title.innerHTML = path;
+        rect.appendChild(title);
+
+        svg.appendChild(rect);
+
+        var textString = []
+
+        var textX = x;
+        var textY = y - hight + 10;
+
+        textString = name.split(/[-_.]+/);
+        var countElement = 0;
+        var yy = hight/3;
+        textString.forEach(function(element){
+            if (element.length > 13) {
+                var removeString = element.length -13;
+                element = element.substring(0, element.length - removeString)
+            }
+
+            if (textString.length === 1)
+            {
+                var Text = document.createElementNS(svgNS, 'text');
+                Text.setAttribute('id', path);
+                Text.setAttribute('x', textX);
+                Text.setAttribute('y', (yy*1) + textY);
+                Text.setAttribute('alignment-baseline', 'middle');
+                Text.setAttribute('text-anchor', 'middle');
+                Text.setAttribute('fill', colorText);
+                Text.setAttribute('class', 'pointer textObj');
+                Text.addEventListener("mousedown",  GetSVG);
+
+                Text.textContent = element;
+                svg.appendChild(Text);
+            }
+            else
+            {
+                if(countElement<3)
+                {
+                    var Text = document.createElementNS(svgNS, 'text');
+                    Text.setAttribute('id', path);
+                    Text.setAttribute('x', textX);
+                    Text.setAttribute('y', (yy*countElement) + textY);
+                    Text.setAttribute('alignment-baseline', 'middle');
+                    Text.setAttribute('text-anchor', 'middle');
+                    Text.setAttribute('fill', colorText);
+                    Text.addEventListener("mousedown",  GetSVG);
+                    Text.setAttribute('class', 'pointer textObj');
+                    Text.textContent = element;
+                    svg.appendChild(Text);
+
+                    countElement++;
+                }
+            }
+        });
+    }
+
+    function download()
+    {
+        var contentType = "NoamRiterSVG.svg";
+
+        var content = document.getElementsByTagName('svg')[0].outerHTML;
+
+        content = content.substr(4);
+
+        content = "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"" + content;
+
+        if(!contentType) contentType = 'application/octet-stream';
+        var a = document.createElement('a');
+        var blob = new Blob([content], {'type':contentType});
+        a.href = window.URL.createObjectURL(blob);
+        a.download = "NoamRiterSVG.svg";
+        a.click();
+    }
+
+    function linesConnections(element) {
+        var currentLocation = window.location.href;
+        var param;
+        //fix e mellan path och &
+        if (currentLocation.indexOf("?") > -1) {
+            var Allparams = currentLocation.split('?');
+
+            var params = Allparams[1].split('&');
+            param = params[0];
+        }
+        else
+        {
+            param = "path=ROOT"
+        }
+
+        if (element.value === "1") {
+            var ColorText = $("#colorText").val().replace("#", "%23");
+            var ColorLines =   $("#colorLines").val().replace("#", "%23");
+            var ColorRectWithText =   $("#colorRectWithText").val().replace("#", "%23");
+            var ColorRectWithoutText =   $("#colorRectWithoutText").val().replace("#", "%23");
+            var LinesConnection = "2";
+
+            window.location.href = '/home/SiteMapping?' + param + '&colorText=' + ColorText + '&colorLines=' + ColorLines  + '&colorRectWithText=' + ColorRectWithText + '&colorRectWithoutText=' + ColorRectWithoutText + '&linesConnection=' + LinesConnection;
+
+
+        }
+        else if (element.value === "2") {
+
+            var ColorText = $("#colorText").val().replace("#", "%23");
+            var ColorLines =   $("#colorLines").val().replace("#", "%23");
+            var ColorRectWithText =   $("#colorRectWithText").val().replace("#", "%23");
+            var ColorRectWithoutText =   $("#colorRectWithoutText").val().replace("#", "%23");
+            var LinesConnection = "1";
+
+            window.location.href = '/home/SiteMapping?' + param + '&colorText=' + ColorText + '&colorLines=' + ColorLines  + '&colorRectWithText=' + ColorRectWithText + '&colorRectWithoutText=' + ColorRectWithoutText + '&linesConnection=' + LinesConnection;
+
+
+
+        }
+
+
+    }
+</script>
+<div class="container">
+
+
+
+    <div id="div_svg" class="moveLeft setting">
+        <svg id="svg" class="grabbable" width="@Model.WidthSize" height="@Model.HeightSize" style='stroke-width: 0px; background-color: white;'>
+        </svg>
+        <div class="setting" data-spy="affix" data-offset-top="50" height="@Model.HeightSize">
+            <div class="row setting">
+                <button class="btnsetting" type="button" data-toggle="collapse" data-target="#demo" id="divOption"><img class="imgSetting" src="~/Content/img/gear.png" width="60" height="60" data-toggle="collapse" data-target="#demo" /></button>
+                <div id="demo" class="collapse container divSetting" style="height='@Model.HeightSize'">
+                    <div class="col-xs-6 col1">
+                        <div class="col-xs-7 col-xs-offset-1 col1">
+                            <div>
+                                <label for="colorText">Text</label>
+                                <input type="color" id="colorText" name="colorText" value="@Model.ColorText">
+                            </div>
+                            <div>
+                                <label for="colorLines">Linjer</label>
+                                <input type="color" id="colorLines" name="colorLines" value="@Model.ColorLines">
+                            </div>
+                            <div>
+                                <label for="colorRectWithText">Rektanglar med text</label>
+                                <input type="color" id="colorRectWithText" name="colorRectWithText" value="@Model.ColorRectWithText">
+                            </div>
+                            <div>
+                                <label for="colorRectWithoutText">Rektanglar utan text</label>
+                                <input type="color" id="colorRectWithoutText" name="colorRectWithoutText" value="#ff00ff">
+                            </div>
+                            <br />
+                            <div>
+                                <label for="linesConnection">Mönster</label>
+                                @if (Model.LinesConnection == "1")
+                                {
+
+                                    <input type="text" class="inputSetting pointer" id="linesConnection" onclick="linesConnections(this)" name="linesConnection" value="1" style="background-image: url(../../Content/img/diago.png); background-repeat:no-repeat; width:150px; height:96px; color:transparent;" readonly="readonly">
+                                }
+                                else if (Model.LinesConnection == "2")
+                                {
+                                    <input type="text" class="inputSetting pointer" id="linesConnection" onclick="linesConnections(this)" name="linesConnection" value="2" style="background-image: url(../../Content/img/rect.png); background-repeat:no-repeat; width:150px; height:96px; color:transparent;" readonly="readonly">
+
+                                }
+
+                            </div>
+                            <br />
+                            <div>
+                                <button class="btnsetting" onclick="download()"><img class="imgSave" src="~/Content/img/save-as-svg.png" width="50" height="50" /></button>
+                            </div>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

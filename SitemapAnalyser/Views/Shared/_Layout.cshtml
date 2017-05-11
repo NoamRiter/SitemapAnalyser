@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    <style>
+        body {
+            margin: 40px;
+            background: #225b93;
+        }
+
+        .navbar-inverse {
+            background: #225b93;
+        }
+
+            .navbar-inverse .navbar-brand {
+                /*color: #f9fafb;*/
+                color: #fcfcfd;
+            }
+
+            .navbar-inverse .navbar-nav > li > a {
+                color: #f9fafb;
+                padding-top: 21px;
+            }
+
+        /*.centerText{
+            position:relative;
+            left:50%;
+            height:60px;
+        }*/
+
+        .colorText {
+            color: #fcfcfd;
+            font-size: 24px;
+        }
+
+        .menuA {
+            position: relative;
+            left: 50%;
+            height: 60px;
+            padding-top: 21px;
+        }
+
+       .navbar-nav > li >a{
+            color: #d4dce2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div>
+                        @*<img class="navbar-brand" src="~/Content/img/Söderberg-&-Partners---Logotyp-B-Enradig---Vit.png" onclick="location.href='@Url.Action("Index", "Home")';return false;" />*@
+                        @Html.ActionLink("Kartläggning av webbsida", "Index", "Home", new { area = "" }, new { @class = "navbar-brand colorText centerText" })
+                    </div>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="colorText centerText">@Html.ActionLink("Hem", "Index", "Home", new { @class = "menuA navbar-brand colorText centerText" })</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>
+        <div id="r_body" class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p class="colorText">Kartläggning av webbsida @DateTime.Now.Year &copy; Noam Riter</p>
+            </footer>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,97 @@
+﻿@model SitemapAnalyser.ViewModel.SiteMappingOptionsViewModel
+@{
+    ViewBag.Title = "Web site mapping options";
+}
+<style>
+    .tim {
+        font-size: 18px;
+        border: 2px solid #AD235E;
+        width: 150px;
+        height: 150px;
+    }
+</style>
+
+<script>
+    function linesConnections(element) {
+        if (element.value === "1") {
+            element.style.backgroundImage = "url(../../Content/img/diagonalS.png)";
+            element.value = "2";
+        }
+        else if (element.value === "2") {
+
+            element.style.backgroundImage = "url(../../Content/img/rectangularS.png)";
+            element.value = "1";
+        }
+    }
+
+
+    function submitUpload() {
+        document.forms['Upload'].submit();
+    }
+
+    function submitSiteMap() {
+
+        document.forms['SiteMapping'].submit();
+    }
+</script>
+<div class="jumbotron">
+    <div class="row">
+        <div class="row">
+            @using (Html.BeginForm("Upload", "Home", FormMethod.Post,
+                                            new { enctype = "multipart/form-data", name = "Upload" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <p>Du kan skapa en .xml-fil på <a href="https://www.codepunker.com/tools/sitemap-generator" target="_blank">codepunker</a></p>
+                <p>När filen är klar kan du ladda upp den här:</p>
+                <div class="editor-field">
+                    @Html.TextBox("file", "", new { type = "file", accept = ".xml", onchange = "submitUpload()", onended = "submitSiteMap()" })
+                </div>
+                <div>
+                    <h2>@ViewBag.Message</h2>
+                </div>
+            }
+        </div>
+        <hr />
+        @using (@Html.BeginForm("SiteMapping", "Home", FormMethod.Post,
+                                                new { name = "SiteMapping" }))
+        {
+            <div class="row">
+                <button type="button" data-toggle="collapse" data-target="#demo">Inställningar</button>
+                <div id="demo" class="collapse container">
+                    <div class="col-xs-6 col-xs-offset-1 col1">
+                        <h3>Färger</h3>
+                        <div class="col-xs-7 col-xs-offset-1 col1">
+                            <div>
+                                <label for="colorText">Text</label>
+                                <input type="color" id="colorText" name="colorText" value="#1a1aff">
+                            </div>
+                            <div>
+                                <label for="colorLines">Linjer</label>
+                                <input type="color" id="colorLines" name="colorLines" value="#ffff00">
+                            </div>
+                            <div>
+                                <label for="colorRectWithText">Rektanglar med text</label>
+                                <input type="color" id="colorRectWithText" name="colorRectWithText" value="#ff0000">
+                            </div>
+                            <div>
+                                <label for="colorRectWithoutText">Rektanglar utan text</label>
+                                <input type="color" id="colorRectWithoutText" name="colorRectWithoutText" value="#ff00ff">
+                            </div>
+                            <div>
+                                <label for="linesConnection">lines koppling</label>
+                                <input type="text" id="linesConnection" onclick="linesConnections(this)" name="linesConnection" value="1" style="background-image: url(../../Content/img/rectangularS.png); width:150px; height:64px; color:transparent;" readonly="readonly">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div>
+                    <input type="submit" class="submitButton" value="Ladda sitemap" id="btnSubmitChange" />
+                </div>
+            </div>
+        }
+    </div>
+</div>
